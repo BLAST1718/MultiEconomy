@@ -18,7 +18,7 @@ class PayCommand extends PluginCommand{
 
     public function __construct(MultiEconomy $plugin){
         $this->plugin = $plugin;
-        parent::__construct("pay", $plugin);
+        parent::__construct("spay", $plugin);
         $this->setDescription("Pay another player money for a currency");
     }
 
