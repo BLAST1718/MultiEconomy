@@ -19,9 +19,9 @@ class BalanceTopCommand extends PluginCommand{
     private $plugin;
 
     public function __construct(MultiEconomy $plugin){
-        parent::__construct("balancetop", $plugin);
+        parent::__construct("sbalancetop", $plugin);
 
-        $this->setAliases(["baltop"]);
+        $this->setAliases(["sbaltop"]);
         $this->setDescription("Show the top balances for a currency");
 
         $this->plugin = $plugin;
