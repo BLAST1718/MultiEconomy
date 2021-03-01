@@ -36,7 +36,7 @@ class BalanceTopCommand extends PluginCommand{
 
         if(empty($args[0])){
             $sender->sendMessage($this->plugin->translateMessage("command-usage", [
-                "usage" => "/balancetop <currency> [page]"
+                "usage" => "/sbalancetop <currency> [page]"
             ]));
 
             return;
