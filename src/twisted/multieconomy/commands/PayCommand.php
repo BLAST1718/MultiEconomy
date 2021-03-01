@@ -31,7 +31,7 @@ class PayCommand extends PluginCommand{
 
         if(count($args) < 3){
             $sender->sendMessage($this->plugin->translateMessage("command-usage", [
-                "usage" => "/pay <target> <currency> <amount>"
+                "usage" => "/spay <target> <currency> <amount>"
             ]));
 
             return;
