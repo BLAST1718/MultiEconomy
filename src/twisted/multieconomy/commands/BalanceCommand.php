@@ -17,9 +17,9 @@ class BalanceCommand extends PluginCommand{
     private $plugin;
 
     public function __construct(MultiEconomy $plugin){
-        parent::__construct("sbalance", $plugin);
+        parent::__construct("pointbalance", $plugin);
 
-        $this->setAliases(["sbal"]);
+        $this->setAliases(["pointbal"]);
         $this->setDescription("Check yours or another targets balance");
 
         $this->plugin = $plugin;
