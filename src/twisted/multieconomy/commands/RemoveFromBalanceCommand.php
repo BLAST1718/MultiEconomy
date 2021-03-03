@@ -17,9 +17,9 @@ class RemoveFromBalanceCommand extends PluginCommand{
     private $plugin;
 
     public function __construct(MultiEconomy $plugin){
-        parent::__construct("removefrombalance", $plugin);
+        parent::__construct("removepointfrombalance", $plugin);
 
-        $this->setAliases(["removefrombal"]);
+        $this->setAliases(["removepointfrombal"]);
         $this->setDescription("Remove from a players balance");
         $this->setPermission("multieconomy.removefrombalance");
 
@@ -39,7 +39,7 @@ class RemoveFromBalanceCommand extends PluginCommand{
 
         if(count($args) < 3){
             $sender->sendMessage($this->plugin->translateMessage("command-usage", [
-                "usage" => "/removefrombalance <target> <currency> <amount>"
+                "usage" => "/removepointfrombalance <target> <currency> <amount>"
             ]));
 
             return;
