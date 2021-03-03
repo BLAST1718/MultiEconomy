@@ -2,9 +2,16 @@
 lang: "eng" # 3 letter language code (Check README.md for supported languages)
 
 currencies:
-  shards: # Currency Name (lowercase)
-    name: "Shards" #Currency Name with capitals
-    symbol: "S" # Currency Symbol (Must be a string)
+  coins: # Currency Name (lowercase)
+    name: "Coins" #Currency Name with capitals
+    symbol: "" # Currency Symbol (Must be a string)
+    symbol-after: true # If you want the symbol before the currency amount (Must be a boolean)
+    starting-amount: 0 # Amount a player starts on when they first join
+    min-amount: 0 # Minimum amount of money a player can have with the currency
+    max-amount: 999999 # Maximum amount of money a player can have with the currency
+  vote: # Currency Name (lowercase)
+    name: "VotePoint" #Currency Name with capitals
+    symbol: "Vp" # Currency Symbol (Must be a string)
     symbol-after: true # If you want the symbol before the currency amount (Must be a boolean)
     starting-amount: 0 # Amount a player starts on when they first join
     min-amount: 0 # Minimum amount of money a player can have with the currency
