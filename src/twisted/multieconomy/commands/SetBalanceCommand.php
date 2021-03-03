@@ -19,7 +19,7 @@ class SetBalanceCommand extends PluginCommand{
     public function __construct(MultiEconomy $plugin){
         parent::__construct("setbalance", $plugin);
 
-        $this->setAliases(["setbal"]);
+        $this->setAliases(["pointsetbal"]);
         $this->setDescription("Set a player's balance for a currency");
         $this->setPermission("multieconomy.setbalance");
 
@@ -39,7 +39,7 @@ class SetBalanceCommand extends PluginCommand{
 
         if(count($args) < 3){
             $sender->sendMessage($this->plugin->translateMessage("command-usage", [
-                "usage" => "/setbalance <player> <currency> <balance>"
+                "usage" => "/pointsetbalance <player> <currency> <balance>"
             ]));
 
             return;
