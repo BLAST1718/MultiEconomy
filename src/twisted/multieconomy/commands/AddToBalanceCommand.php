@@ -17,7 +17,7 @@ class AddToBalanceCommand extends PluginCommand{
     private $plugin;
 
     public function __construct(MultiEconomy $plugin){
-        parent::__construct("addtobalance", $plugin);
+        parent::__construct("addtopointbalance", $plugin);
 
         $this->setAliases(["addtobal"]);
         $this->setDescription("Add to a players balance");
@@ -39,7 +39,7 @@ class AddToBalanceCommand extends PluginCommand{
 
         if(count($args) < 3){
             $sender->sendMessage($this->plugin->translateMessage("command-usage", [
-                "usage" => "/addtobalance <target> <currency> <amount>"
+                "usage" => "/addtopointbalance <target> <currency> <amount>"
             ]));
 
             return;
