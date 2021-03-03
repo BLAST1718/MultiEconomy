@@ -19,9 +19,9 @@ class BalanceTopCommand extends PluginCommand{
     private $plugin;
 
     public function __construct(MultiEconomy $plugin){
-        parent::__construct("sbalancetop", $plugin);
+        parent::__construct("pointbalancetop", $plugin);
 
-        $this->setAliases(["sbaltop"]);
+        $this->setAliases(["pointbaltop"]);
         $this->setDescription("Show the top balances for a currency");
 
         $this->plugin = $plugin;
@@ -36,7 +36,7 @@ class BalanceTopCommand extends PluginCommand{
 
         if(empty($args[0])){
             $sender->sendMessage($this->plugin->translateMessage("command-usage", [
-                "usage" => "/sbalancetop <currency> [page]"
+                "usage" => "/pointbalancetop <currency> [page]"
             ]));
 
             return;
